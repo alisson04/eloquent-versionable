@@ -17,5 +17,9 @@ class VersioningServiceProvider extends ServiceProvider
         $this->app->singleton('versioningDate', function () {
             return (new VersioningDate())->setDate(Carbon::now()->addDay());
         });
+
+        $this->app->singleton('VersioningTable', function () {
+            return new VersioningTable();
+        });
     }
 }
