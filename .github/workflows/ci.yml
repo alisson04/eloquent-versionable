@@ -32,5 +32,8 @@ jobs:
       - name: Install Dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
 
-      - name: Run PHPUnit Tests
+      - name: Run PHP Unit Tests
         run: ./vendor/bin/phpunit
+
+      - name: Run PHP insights
+        run: ./vendor/bin/phpinsights
